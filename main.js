@@ -13,7 +13,9 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 const geomatry = new THREE.SphereGeometry(10);
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("./earthtexture.jpg");
+const texture = textureLoader.load(
+  "https://ananddudi.github.io/earth-three/earthtexture.jpg"
+);
 const material = new THREE.MeshStandardMaterial({
   map: texture,
 });
@@ -22,8 +24,7 @@ material.roughness = 0;
 const sphere = new THREE.Mesh(geomatry, material);
 scene.add(sphere);
 
-// const light = new THREE.DirectionalLight(0xfaf8fe, 1);
-const light = new THREE.AmbientLight(0x404040, 2.8);
+const light = new THREE.DirectionalLight(0xfaf8fe, 1);
 scene.add(light);
 
 light.position.set(1, 0, 0.8);
