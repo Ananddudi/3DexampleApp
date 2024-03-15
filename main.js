@@ -47,6 +47,15 @@ animate();
 window.addEventListener("mousemove", (event) => {
   console.log("here");
   // sphere.rotation.z = event.clientY * 0.01;
-  sphere.rotation.y = event.clientX * 0.01;
+  sphere.rotation.y = -event.clientX * 0.01;
   sphere.rotation.x = event.clientY * 0.01;
+});
+
+window.addEventListener("touchmove", (event) => {
+  event.preventDefault();
+
+  const touch = event.touches[0];
+
+  sphere.rotation.y = -touch.clientX * 0.01;
+  sphere.rotation.x = touch.clientY * 0.01;
 });
