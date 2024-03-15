@@ -22,7 +22,8 @@ material.roughness = 0;
 const sphere = new THREE.Mesh(geomatry, material);
 scene.add(sphere);
 
-const light = new THREE.DirectionalLight(0xfaf8fe, 1);
+// const light = new THREE.DirectionalLight(0xfaf8fe, 1);
+const light = new THREE.AmbientLight(0x404040, 2.8);
 scene.add(light);
 
 light.position.set(1, 0, 0.8);
