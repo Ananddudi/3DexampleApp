@@ -13,7 +13,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 const geomatry = new THREE.SphereGeometry(10);
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("./earthtexture.jpg");
+const texture = textureLoader.load("/earthtexture.jpg");
 const material = new THREE.MeshStandardMaterial({
   map: texture,
 });
